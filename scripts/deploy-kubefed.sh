@@ -70,7 +70,7 @@ function helm-deploy-cmd {
   local image="${4}"
   local tag="${5}"
 
-  echo "helm install charts/kubefed ${name} --namespace ${ns} \
+  echo "helm install ${name} charts/kubefed --namespace ${ns} \
       --set controllermanager.controller.repository=${repo} \
       --set controllermanager.controller.image=${image} \
       --set controllermanager.controller.tag=${tag} \
